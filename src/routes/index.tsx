@@ -47,7 +47,7 @@ function Invitation() {
       <Hero opened={opened} onOpen={open} />
 
       {opened && (
-        <div className="animate-rise">
+        <div>
           <CoupleSection />
           <StorySection />
           <EventsSection />

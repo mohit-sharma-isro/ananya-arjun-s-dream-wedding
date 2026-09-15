@@ -3,11 +3,10 @@ import { SectionHeading } from "./SectionHeading";
 
 export function RsvpSection() {
   return (
-    <section id="rsvp" className="bg-blush-soft/50 px-5 py-20 sm:py-28">
+    <section id="rsvp" className="bg-blush-soft/50 px-5 py-12 sm:py-16">
       <SectionHeading
         eyebrow="Presence & Blessings"
         title="Warm Invite"
-        subtitle="We look forward to celebrating these special moments together."
       />
 
       <div className="mx-auto max-w-2xl">
@@ -23,6 +22,9 @@ export function RsvpSection() {
           <div className="gold-rule mx-auto w-28 opacity-60" />
 
           <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold mb-1">
+              R.S.V.P
+            </p>
             <h4 className="font-display text-2xl text-gold-ink font-medium">
               Sharma Family
             </h4>

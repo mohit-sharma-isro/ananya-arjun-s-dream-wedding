@@ -27,8 +27,8 @@ export const venueLocations: VenueLocation[] = [
     address: "Dhamot, Punjab",
     dateStr: "Thursday, 19 November 2026",
     events: [
-      { name: "Haldi Ceremony", timing: "11:00 AM – 3:00 PM", badge: "Turmeric & Sunshine" },
-      { name: "Jaago (Sangeet)", timing: "6:00 PM onwards", badge: "Music & Dhol Night" },
+      { name: "Haldi Ceremony", timing: "11:00 AM – 1:00 PM", badge: "Turmeric & Sunshine" },
+      { name: "Jaago (Sangeet)", timing: "6:00 PM – 10:00 PM", badge: "Music & Dhol Night" },
     ],
     lat: 30.6385,
     lng: 76.0125,
@@ -41,7 +41,7 @@ export const venueLocations: VenueLocation[] = [
     address: "Ludhiana, Punjab",
     dateStr: "Saturday, 21 November 2026",
     events: [
-      { name: "Wedding & Pheras", timing: "7:00 PM onwards", badge: "Royal Formal" },
+      { name: "Wedding & Pheras", timing: "10:00 AM – 4:00 PM", badge: "Picture Perfect" },
     ],
     lat: 30.8654,
     lng: 75.7891,
@@ -53,7 +53,7 @@ export function VenuesSection() {
   const [active, setActive] = useState<VenueLocation>(venueLocations[0]!);
 
   return (
-    <section id="venues" className="bg-sage-soft/50 px-5 py-20 sm:py-28">
+    <section id="venues" className="bg-sage-soft/50 px-5 py-12 sm:py-16">
       <SectionHeading
         eyebrow="Finding Us"
         title="Venues & Map"

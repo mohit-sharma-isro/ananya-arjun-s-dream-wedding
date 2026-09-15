@@ -29,7 +29,9 @@ export function Hero() {
       <Petals count={25} />
 
       <div className="relative z-10 mx-auto flex max-w-2xl flex-col items-center animate-rise">
-        <p className="font-display text-base tracking-[0.18em] text-gold sm:text-lg">{couple.invocation}</p>
+        <p className="font-display text-base font-bold tracking-[0.18em] text-[#b38328] sm:text-lg drop-shadow-sm">
+          {couple.invocation}
+        </p>
 
         <img
           src={couple.logoImage}
@@ -45,20 +47,20 @@ export function Hero() {
           {couple.bride.name}
         </h1>
 
-        <div className="gold-rule mt-7 w-44 sm:w-64" />
+        <div className="mt-6 max-w-md rounded-2xl border border-gold/25 bg-card/60 p-6 shadow-sm backdrop-blur-sm">
+          <p className="font-display text-base italic leading-relaxed text-ink/85 sm:text-lg">{couple.welcome}</p>
+        </div>
 
-        <p className="mt-5 font-display text-lg text-ink/80 sm:text-2xl">{couple.displayDate}</p>
+        <p className="mt-5 text-[0.8rem] uppercase tracking-[0.3em] text-gold">{couple.hashtag}</p>
+
+        <p className="mt-3 font-display text-lg text-ink/80 sm:text-2xl">{couple.displayDate}</p>
         <p className="mt-1 text-[0.68rem] uppercase tracking-[0.3em] text-muted-foreground">{couple.city}</p>
 
-        <div className="mt-9 w-full">
+        <div className="gold-rule mt-6 w-44 sm:w-64" />
+
+        <div className="mt-8 w-full">
           <Countdown />
         </div>
-
-        <div className="mt-10 animate-rise max-w-md rounded-2xl border border-gold/25 bg-card/60 p-6 shadow-sm backdrop-blur-sm">
-          <p className="font-display text-lg italic leading-relaxed text-ink/85">{couple.welcome}</p>
-        </div>
-
-        <p className="mt-6 text-[0.6rem] uppercase tracking-[0.3em] text-gold">{couple.hashtag}</p>
       </div>
     </section>
   );

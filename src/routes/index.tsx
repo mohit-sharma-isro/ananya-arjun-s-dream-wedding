@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useReveal } from "@/hooks/useReveal";
 import { couple } from "@/data/weddingData";
 import { CoverOverlay } from "@/components/wedding/CoverOverlay";
@@ -31,6 +31,13 @@ function Invitation() {
   const [opened, setOpened] = useState(false);
   useReveal([opened]);
 
+  useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main className="relative min-h-screen bg-ivory text-ink overflow-x-hidden">
       <CoverOverlay onOpened={() => setOpened(true)} />
@@ -55,7 +62,7 @@ function Invitation() {
           </p>
           <div className="gold-rule mx-auto mt-6 w-24" />
           <p className="mt-6 text-xs italic text-muted-foreground">
-            Made with love, and a great deal of help from our families.
+            Put together with love and a lot of family hands
           </p>
           <div className="h-16 sm:h-0" />
         </footer>

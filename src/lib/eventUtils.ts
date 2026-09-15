@@ -15,18 +15,31 @@ function toStamp(d: Date) {
 
 export function eventRange(event: WeddingEvent) {
   const start = istToDate(event.date, event.startTime);
-  let end = istToDate(event.date, event.endTime);
+  let end =
+    event.endTime && event.endTime.toLowerCase() !== "onwards"
+      ? istToDate(event.date, event.endTime)
+      : new Date(start.getTime() + 4 * 3600_000);
   if (end <= start) end = new Date(end.getTime() + 24 * 3600_000);
   return { start, end };
 }
 
 export function formatTimeRange(event: WeddingEvent) {
   const fmt = (t: string) => {
-    const [h = 0, m = 0] = t.split(":").map(Number);
+    if (!t) return "";
+    if (t.toLowerCase() === "onwards") return "Onwards";
+    const parts = t.split(":");
+    if (parts.length < 2) return t;
+    const h = Number(parts[0]);
+    const m = Number(parts[1]);
+    if (isNaN(h) || isNaN(m)) return t;
     const suffix = h >= 12 ? "PM" : "AM";
     const hour = h % 12 === 0 ? 12 : h % 12;
     return `${hour}:${String(m).padStart(2, "0")} ${suffix}`;
   };
+
+  if (!event.endTime || event.endTime.toLowerCase() === "onwards") {
+    return `${fmt(event.startTime)} Onwards`;
+  }
   return `${fmt(event.startTime)} – ${fmt(event.endTime)}`;
 }
 

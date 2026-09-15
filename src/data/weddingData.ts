@@ -60,14 +60,14 @@ export const couple = {
     fullName: "Akansha Wankhade",
     parents: "Daughter of Mr. Vilas Wankhade & Mrs. Minakshi Wankhade",
     image: brideImg,
-    bio: "An architect from Ahmedabad who sketches buildings on napkins, collects old Gujarati poetry and makes the best masala chai on the street.",
+    bio: "Carrying the warmth of Maharashtra, now coding the future for ISRO's skies,  She spins grace through the rhythm of dance and breathes life onto canvas with vibrant strokes of painting.",
   },
   groom: {
     name: "Mohit",
     fullName: "Mohit Sharma",
-    parents: "Son of Mr. Rajinder Kumar & Mrs. Late Seema Sharma",
+    parents: "Son of Mr. Rajinder Kumar & Late Mrs. Seema Sharma",
     image: groomImg,
-    bio: "A product designer from Mumbai who runs at sunrise, plays the tabla badly with great enthusiasm, and has loved Akansha since a rainy Tuesday in 2019.",
+    bio: "Rooted in the soil of Punjab, A Scientist reaching for the stars, He maps the infinite skies while weaving melodies, captures fleeting moments through a lens, and wanders the world with a curious heart.",
   },
   hashtag: "#MohitWedsAkansha",
   city: "Ludhiana, Punjab",
@@ -77,14 +77,14 @@ export const couple = {
   logoImage: logoImg,
   invocation: "॥ श्री गणेशाय नमः ॥",
   welcome:
-    "With the blessings of our families, we invite you to join us as two hearts, two families and a thousand little moments become one.",
+    "With the blessings of Late Shri Ram Prakash Sharma & Smt Pushvindera Rani, We invite you to join us as two hearts, two families and a thousand little moments become one.",
 };
 
 export const themes: Record<ThemeKey, { label: string; color: string; soft: string; ink: string }> = {
   sage: { label: "Sage", color: "var(--sage)", soft: "var(--sage-soft)", ink: "var(--sage-ink)" },
-  peach: { label: "Peach", color: "var(--peach)", soft: "var(--peach-soft)", ink: "var(--peach-ink)" },
-  powder: { label: "Powder Blue", color: "var(--powder)", soft: "var(--powder-soft)", ink: "var(--powder-ink)" },
-  blush: { label: "Blush", color: "var(--blush)", soft: "var(--blush-soft)", ink: "var(--blush-ink)" },
+  peach: { label: "Marigold Yellow", color: "var(--peach)", soft: "var(--peach-soft)", ink: "var(--peach-ink)" },
+  powder: { label: "Traditional Punjabi", color: "var(--powder)", soft: "var(--powder-soft)", ink: "var(--powder-ink)" },
+  blush: { label: "Picture Perfect", color: "var(--blush)", soft: "var(--blush-soft)", ink: "var(--blush-ink)" },
   champagne: {
     label: "Champagne",
     color: "var(--champagne)",
@@ -100,13 +100,13 @@ export const events: WeddingEvent[] = [
     subtitle: "Turmeric & Sunshine",
     date: "2026-11-19",
     startTime: "11:00",
-    endTime: "15:00",
+    endTime: "13:00",
     venue: "Dhamot",
     address: "Dhamot, Punjab",
     lat: 30.6385,
     lng: 76.0125,
     mapsLink: "https://maps.app.goo.gl/jQ3kYXVQoQn5Yy3Z8?g_st=ic",
-    dressCode: "Soft peach & marigold yellow — festive traditional",
+    dressCode: "Marigold Yellow",
     description:
       "Turmeric, laughter and joyful celebrations starting from 11:00 AM onwards.",
     theme: "peach",
@@ -118,13 +118,13 @@ export const events: WeddingEvent[] = [
     subtitle: "A Night of Dancing",
     date: "2026-11-19",
     startTime: "18:00",
-    endTime: "23:59",
+    endTime: "22:00",
     venue: "Dhamot",
     address: "Dhamot, Punjab",
     lat: 30.6385,
     lng: 76.0125,
     mapsLink: "https://maps.app.goo.gl/jQ3kYXVQoQn5Yy3Z8?g_st=ic",
-    dressCode: "Powder blue & silver — traditional Punjabi / cocktail",
+    dressCode: "Traditional Punjabi ",
     description:
       "A night of Jaago, music, live dhol and dancing starting from 6:00 PM onwards.",
     theme: "powder",
@@ -135,16 +135,16 @@ export const events: WeddingEvent[] = [
     name: "Wedding",
     subtitle: "The Pheras & Celebration",
     date: "2026-11-21",
-    startTime: "19:00",
-    endTime: "23:30",
-    venue: "By the Falls Mansion",
+    startTime: "10:00",
+    endTime: "16:00",
+    venue: "By The Falls Mansion",
     address: "Ludhiana, Punjab",
     lat: 30.8654,
     lng: 75.7891,
     mapsLink: "https://maps.app.goo.gl/Qbd3A9LUKMCBLbGk9?g_st=ic",
-    dressCode: "Blush pink & gold — royal traditional formal",
+    dressCode: "Dress to impress and help us make our day picture perfect!",
     description:
-      "The grand wedding celebrations at By the Falls Mansion, Ludhiana.",
+      "The grand wedding celebrations at By The Falls Mansion, Ludhiana.",
     theme: "blush",
     image: weddingImg,
   },
@@ -168,7 +168,7 @@ export const blessings: Blessing[] = [
     names: "Vilas & Minakshi Wankhade",
     relation: "Parents of the bride",
     message:
-      "We have watched Akansha grow from a girl with big dreams to an extraordinary woman. May her new home be full of light, laughter and endless happiness.",
+      "She was the little girl who dreamed beyond the clouds, and today she steps into a beautiful new chapter. May Akansha's home always be blessed with warmth, laughter, and boundless joy. We welcome Mohit with open hearts into our family—a man whose warmth and partnership make him the true keeper of her happiness.",
   },
   {
     id: "b3",
@@ -176,7 +176,7 @@ export const blessings: Blessing[] = [
     names: "Rajinder Kumar Sharma",
     relation: "Father of the groom",
     message:
-      "Akansha did not join our family, she completed it. Mohit, be gentle, be patient, and cherish every moment together.",
+      "We are so overjoyed to officially welcome you into our family, Akansha. Watching Mohit love you has been a true joy, and we can’t wait to share in the magic of your wedding day as you officially become a daughter of our hearts.",
   },
 ];
 

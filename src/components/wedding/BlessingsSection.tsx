@@ -5,7 +5,7 @@ const sides = ["Bride's Family", "Groom's Family"] as const;
 
 export function BlessingsSection() {
   return (
-    <section id="blessings" className="px-5 py-20 sm:py-28">
+    <section id="blessings" className="relative px-5 py-12 sm:py-16">
       <SectionHeading
         eyebrow="Ashirvaad"
         title="Family & Blessings"

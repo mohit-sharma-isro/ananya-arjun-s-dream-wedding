@@ -10,11 +10,11 @@ export function CoupleSection() {
     activePerson === "groom"
       ? couple.groom.image
       : activePerson === "bride"
-      ? couple.bride.image
-      : couple.coupleImage;
+        ? couple.bride.image
+        : couple.coupleImage;
 
   return (
-    <section id="couple" className="relative px-5 py-20 sm:py-28">
+    <section id="couple" className="relative px-5 py-12 sm:py-16">
       <SectionHeading
         eyebrow="The Two of Us"
         title={`${couple.groom.name} & ${couple.bride.name}`}
@@ -23,39 +23,37 @@ export function CoupleSection() {
 
       <div className="mx-auto max-w-4xl">
         {/* Person Selector Tabs */}
-        <div className="mb-8 flex justify-center gap-3">
+        <div className="mb-8 flex items-center justify-center gap-3">
           <button
             type="button"
             onClick={() => setActivePerson("groom")}
-            className={`rounded-full px-6 py-2.5 text-xs uppercase tracking-[0.22em] transition-all duration-300 ${
-              activePerson === "groom"
-                ? "bg-gold text-ink font-semibold shadow-md scale-105"
-                : "border border-gold/30 bg-card/60 text-ink/75 hover:border-gold/60"
-            }`}
+            className={`rounded-full px-5 py-2 text-xs uppercase tracking-[0.22em] transition-all duration-300 ${activePerson === "groom"
+              ? "bg-gold text-ink font-semibold shadow-md scale-105"
+              : "border border-gold/30 bg-card/60 text-ink/75 hover:border-gold/60"
+              }`}
           >
-            {couple.groom.name} (Groom)
+            Groom
           </button>
           <button
             type="button"
             onClick={() => setActivePerson("both")}
-            className={`rounded-full px-6 py-2.5 text-xs uppercase tracking-[0.22em] transition-all duration-300 ${
-              activePerson === "both"
-                ? "bg-gold text-ink font-semibold shadow-md scale-105"
-                : "border border-gold/30 bg-card/60 text-ink/75 hover:border-gold/60"
-            }`}
+            title="Both"
+            className={`rounded-full px-3.5 py-1.5 transition-all duration-300 flex items-center justify-center ${activePerson === "both"
+              ? "bg-gold/25 border-2 border-gold shadow-md scale-110"
+              : "border border-gold/30 bg-card/60 hover:border-gold/60"
+              }`}
           >
-            Both
+            <img src={couple.logoImage} alt="Both" className="h-7 w-7 object-contain drop-shadow-sm" />
           </button>
           <button
             type="button"
             onClick={() => setActivePerson("bride")}
-            className={`rounded-full px-6 py-2.5 text-xs uppercase tracking-[0.22em] transition-all duration-300 ${
-              activePerson === "bride"
-                ? "bg-gold text-ink font-semibold shadow-md scale-105"
-                : "border border-gold/30 bg-card/60 text-ink/75 hover:border-gold/60"
-            }`}
+            className={`rounded-full px-5 py-2 text-xs uppercase tracking-[0.22em] transition-all duration-300 ${activePerson === "bride"
+              ? "bg-gold text-ink font-semibold shadow-md scale-105"
+              : "border border-gold/30 bg-card/60 text-ink/75 hover:border-gold/60"
+              }`}
           >
-            {couple.bride.name} (Bride)
+            Bride
           </button>
         </div>
 
@@ -69,16 +67,15 @@ export function CoupleSection() {
                 activePerson === "groom"
                   ? couple.groom.fullName
                   : activePerson === "bride"
-                  ? couple.bride.fullName
-                  : `${couple.groom.name} & ${couple.bride.name}`
+                    ? couple.bride.fullName
+                    : `${couple.groom.name} & ${couple.bride.name}`
               }
-              className={`h-full w-full object-cover transition-all duration-700 ease-out animate-rise ${
-                activePerson === "bride" ? "object-[center_75%]" : "object-top"
-              }`}
+              className={`h-full w-full object-cover transition-all duration-700 ease-out animate-rise ${activePerson === "bride" ? "object-[center_75%]" : "object-top"
+                }`}
             />
 
             {/* Bottom Dark Gradient for Text Contrast */}
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/25 to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/35 to-transparent pointer-events-none" />
 
             {/* Dynamic Centered Info Overlay inside Image */}
             <div className="absolute bottom-6 inset-x-6 text-center text-ivory">
@@ -86,22 +83,27 @@ export function CoupleSection() {
                 {activePerson === "groom"
                   ? "The Groom"
                   : activePerson === "bride"
-                  ? "The Bride"
-                  : "Together Forever"}
+                    ? "The Bride"
+                    : "Together Forever"}
               </p>
 
               <h4 className="mt-1 font-display text-3xl sm:text-4xl text-ivory drop-shadow-sm">
                 {activePerson === "groom"
                   ? couple.groom.fullName
                   : activePerson === "bride"
-                  ? couple.bride.fullName
-                  : `${couple.groom.name} & ${couple.bride.name}`}
+                    ? couple.bride.fullName
+                    : `${couple.groom.name} & ${couple.bride.name}`}
               </h4>
 
               {(activePerson === "groom" || activePerson === "bride") && (
-                <p className="mt-1 text-xs italic text-gold-soft/90">
-                  {activePerson === "groom" ? couple.groom.parents : couple.bride.parents}
-                </p>
+                <>
+                  <p className="mt-1 text-xs italic text-gold-soft/90">
+                    {activePerson === "groom" ? couple.groom.parents : couple.bride.parents}
+                  </p>
+                  <p className="mt-3 text-xs sm:text-sm leading-relaxed text-ivory/95 max-w-lg mx-auto font-sans bg-ink/40 p-3 rounded-xl backdrop-blur-xs border border-gold/15 shadow-sm">
+                    {activePerson === "groom" ? couple.groom.bio : couple.bride.bio}
+                  </p>
+                </>
               )}
             </div>
           </div>

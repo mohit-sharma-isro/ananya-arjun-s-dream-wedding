@@ -110,25 +110,6 @@ export function Navigation() {
           </nav>
         </div>
       )}
-
-      {/* Clean text action links on small mobile screens */}
-      <nav className="fixed inset-x-3 bottom-3 z-40 flex items-center justify-around px-2 py-2 sm:hidden">
-        {["couple", "events", "venues", "rsvp"].map((id) => {
-          const label = links.find((l) => l.id === id)!.label;
-          return (
-            <button
-              key={id}
-              type="button"
-              onClick={() => go(id)}
-              className={`px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.2em] font-medium transition ${
-                active === id ? "text-gold" : "text-ink/70"
-              }`}
-            >
-              {label}
-            </button>
-          );
-        })}
-      </nav>
     </>
   );
 }

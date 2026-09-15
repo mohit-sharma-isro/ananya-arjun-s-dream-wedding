@@ -14,7 +14,7 @@ export function EventsSection() {
   const shown = filter === "All" ? events : events.filter((e) => e.name === filter);
 
   return (
-    <section id="events" className="bg-blush-soft/50 px-5 py-20 sm:py-28">
+    <section id="events" className="bg-blush-soft/50 px-5 py-12 sm:py-16">
       <SectionHeading
         eyebrow="Wedding Celebrations"
         title="Wedding Events"

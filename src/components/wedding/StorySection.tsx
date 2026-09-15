@@ -1,4 +1,4 @@
-import { story } from "@/data/weddingData";
+import { story, type StoryMoment } from "@/data/weddingData";
 import { SectionHeading } from "./SectionHeading";
 
 export function StorySection() {
@@ -13,7 +13,7 @@ export function StorySection() {
       <ol className="relative mx-auto max-w-3xl">
         <span aria-hidden className="absolute left-[1.15rem] top-2 bottom-2 w-px bg-gold/30 sm:left-1/2" />
 
-        {story.map((m, i) => (
+        {story.map((m: StoryMoment, i: number) => (
           <li
             key={m.id}
             className={`reveal relative mb-12 pl-12 last:mb-0 sm:mb-16 sm:w-1/2 sm:pl-0 ${

@@ -22,7 +22,7 @@ export function BlessingsSection() {
                 .map((b) => (
                   <figure
                     key={b.id}
-                    className="rounded-3xl border border-gold/20 bg-card p-6 shadow-[0_24px_55px_-50px_var(--ink)]"
+                    className="rounded-3xl border border-gold/20 bg-card p-6 shadow-[0_24px_55px_-50px_var(--ink)] transition duration-300 hover:border-gold/40"
                   >
                     <span aria-hidden className="font-display text-4xl leading-none text-gold/60">
                       &ldquo;

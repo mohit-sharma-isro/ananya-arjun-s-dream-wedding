@@ -1,9 +1,8 @@
 import { useEffect } from "react";
-import { CalendarPlus, Download, MapPin, Navigation, Shirt, X, Clock } from "lucide-react";
+import { CalendarPlus, MapPin, Navigation, Shirt, X, Clock } from "lucide-react";
 import { themes, type WeddingEvent } from "@/data/weddingData";
 import {
   directionsUrl,
-  downloadIcs,
   embedMapUrl,
   formatEventDate,
   formatTimeRange,
@@ -129,18 +128,11 @@ export function EventSheet({ event, onClose }: { event: WeddingEvent | null; onC
             >
               <CalendarPlus className="h-4 w-4" /> Google Calendar
             </a>
-            <button
-              type="button"
-              onClick={() => downloadIcs(event)}
-              className="flex items-center justify-center gap-2 rounded-full border border-gold/50 px-4 py-3 text-[0.68rem] uppercase tracking-[0.2em] text-ink transition hover:bg-champagne-soft"
-            >
-              <Download className="h-4 w-4" /> Download .ics
-            </button>
             <a
               href={directionsUrl(event)}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center justify-center gap-2 rounded-full border border-gold/50 px-4 py-3 text-[0.68rem] uppercase tracking-[0.2em] text-ink transition hover:bg-champagne-soft sm:col-span-2"
+              className="flex items-center justify-center gap-2 rounded-full border border-gold/50 px-4 py-3 text-[0.68rem] uppercase tracking-[0.2em] text-ink transition hover:bg-champagne-soft"
             >
               <Navigation className="h-4 w-4" /> Get Directions
             </a>

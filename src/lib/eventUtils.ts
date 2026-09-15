@@ -45,7 +45,7 @@ export function googleCalendarUrl(event: WeddingEvent) {
   const { start, end } = eventRange(event);
   const params = new URLSearchParams({
     action: "TEMPLATE",
-    text: `${event.name} — Ananya & Arjun`,
+    text: `${event.name} — Mohit & Akansha`,
     dates: `${toStamp(start)}/${toStamp(end)}`,
     details: `${event.description}\n\nDress code: ${event.dressCode}`,
     location: `${event.venue}, ${event.address}`,
@@ -59,16 +59,16 @@ export function downloadIcs(event: WeddingEvent) {
   const ics = [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//Ananya & Arjun//Wedding//EN",
+    "PRODID:-//Mohit & Akansha//Wedding//EN",
     "BEGIN:VEVENT",
-    `UID:${event.id}-ananya-arjun@wedding`,
+    `UID:${event.id}-mohit-akansha@wedding`,
     `DTSTAMP:${toStamp(new Date())}`,
     `DTSTART:${toStamp(start)}`,
     `DTEND:${toStamp(end)}`,
-    `SUMMARY:${esc(`${event.name} — Ananya & Arjun`)}`,
+    `SUMMARY:${esc(`${event.name} — Mohit & Akansha`)}`,
     `DESCRIPTION:${esc(`${event.description}\nDress code: ${event.dressCode}`)}`,
     `LOCATION:${esc(`${event.venue}, ${event.address}`)}`,
-    "END:VEVENT",
+    "END:VCALENDAR",
     "END:VCALENDAR",
   ].join("\r\n");
 
@@ -76,7 +76,7 @@ export function downloadIcs(event: WeddingEvent) {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = `${event.id}-ananya-arjun.ics`;
+  a.download = `${event.id}-mohit-akansha.ics`;
   document.body.appendChild(a);
   a.click();
   a.remove();
@@ -84,7 +84,7 @@ export function downloadIcs(event: WeddingEvent) {
 }
 
 export function directionsUrl(event: WeddingEvent) {
-  return `https://www.google.com/maps/dir/?api=1&destination=${event.lat},${event.lng}`;
+  return event.mapsLink || `https://www.google.com/maps/dir/?api=1&destination=${event.lat},${event.lng}`;
 }
 
 export function embedMapUrl(lat: number, lng: number) {

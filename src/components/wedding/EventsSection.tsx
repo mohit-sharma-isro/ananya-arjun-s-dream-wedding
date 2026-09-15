@@ -14,9 +14,9 @@ export function EventsSection() {
   const shown = filter === "All" ? events : events.filter((e) => e.name === filter);
 
   return (
-    <section id="events" className="px-5 py-20 sm:py-28">
+    <section id="events" className="bg-blush-soft/50 px-5 py-20 sm:py-28">
       <SectionHeading
-        eyebrow="Five Days of Joy"
+        eyebrow="Wedding Celebrations"
         title="Wedding Events"
         subtitle="Tap any celebration for timings, dress code, directions and a calendar reminder."
       />

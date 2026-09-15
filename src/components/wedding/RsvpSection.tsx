@@ -16,7 +16,7 @@ export function RsvpSection() {
           </div>
 
           <p className="font-display text-2xl sm:text-3xl leading-relaxed text-ink drop-shadow-sm">
-            We would be honoured by your presence at our celebration.
+            We would be honoured by your presence at our celebration
           </p>
 
           <div className="gold-rule mx-auto w-28 opacity-60" />
@@ -28,7 +28,7 @@ export function RsvpSection() {
             <h4 className="font-display text-2xl text-gold-ink font-medium">
               Sharma Family
             </h4>
-            
+
             <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-sm font-medium text-ink/80">
               <a
                 href="tel:9814005251"

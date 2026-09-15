@@ -36,7 +36,7 @@ export const venueLocations: VenueLocation[] = [
   },
   {
     id: "ludhiana",
-    name: "By the Falls Mansion",
+    name: "By The Falls Mansion",
     subtitle: "Grand Wedding Ceremony & Reception",
     address: "Ludhiana, Punjab",
     dateStr: "Saturday, 21 November 2026",
@@ -71,11 +71,10 @@ export function VenuesSection() {
                   type="button"
                   onClick={() => setActive(loc)}
                   aria-pressed={isSelected}
-                  className={`w-full rounded-3xl border p-6 text-left transition-all duration-300 ${
-                    isSelected
-                      ? "border-gold bg-card shadow-[0_20px_50px_-30px_var(--ink)] scale-[1.01]"
-                      : "border-gold/20 bg-card/60 hover:bg-card hover:border-gold/40"
-                  }`}
+                  className={`w-full rounded-3xl border p-6 text-left transition-all duration-300 ${isSelected
+                    ? "border-gold bg-card shadow-[0_20px_50px_-30px_var(--ink)] scale-[1.01]"
+                    : "border-gold/20 bg-card/60 hover:bg-card hover:border-gold/40"
+                    }`}
                 >
                   <div className="flex items-start justify-between gap-3">
                     <div>
@@ -90,7 +89,7 @@ export function VenuesSection() {
                       <Calendar className="h-3.5 w-3.5 text-gold" />
                       {loc.dateStr}
                     </p>
-                    
+
                     <div className="space-y-1.5 pt-1">
                       {loc.events.map((ev) => (
                         <div key={ev.name} className="flex items-center justify-between text-xs text-ink/80 bg-background/50 rounded-xl px-3 py-2 border border-gold/10">

@@ -9,7 +9,7 @@ export function BlessingsSection() {
       <SectionHeading
         eyebrow="Ashirvaad"
         title="Family & Blessings"
-        subtitle="A wedding is two families saying yes. Here is what ours have to say."
+        subtitle="A wedding is two families saying yes. Here is what ours have to say"
       />
 
       <div className="mx-auto grid max-w-5xl gap-8 sm:grid-cols-2">

@@ -57,7 +57,7 @@ export function VenuesSection() {
       <SectionHeading
         eyebrow="Finding Us"
         title="Venues & Map"
-        subtitle="Explore our two primary venue locations in Punjab. Tap a venue to view events hosted and map details."
+        subtitle="Explore our two primary venue locations in Punjab. Tap a venue to view events hosted and map details"
       />
 
       <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-[1fr_1.25fr]">

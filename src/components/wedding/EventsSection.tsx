@@ -5,42 +5,19 @@ import { formatEventDate, formatTimeRange } from "@/lib/eventUtils";
 import { SectionHeading } from "./SectionHeading";
 import { EventSheet } from "./EventSheet";
 
-const filters = ["All", ...events.map((e) => e.name)];
-
 export function EventsSection() {
-  const [filter, setFilter] = useState("All");
   const [active, setActive] = useState<WeddingEvent | null>(null);
 
-  const shown = filter === "All" ? events : events.filter((e) => e.name === filter);
-
   return (
-    <section id="events" className="bg-blush-soft/50 px-5 py-12 sm:py-16">
+    <section id="events" className="bg-blush-soft/50 px-5 py-20 sm:py-28">
       <SectionHeading
         eyebrow="Wedding Celebrations"
         title="Wedding Events"
         subtitle="Tap any celebration for timings, dress code, directions and a calendar reminder."
       />
 
-      <div className="reveal mx-auto mb-10 flex max-w-3xl snap-x gap-2 overflow-x-auto pb-2 sm:flex-wrap sm:justify-center">
-        {filters.map((f) => (
-          <button
-            key={f}
-            type="button"
-            onClick={() => setFilter(f)}
-            aria-pressed={filter === f}
-            className={`shrink-0 snap-start rounded-full border px-4 py-2 text-[0.62rem] uppercase tracking-[0.22em] transition ${
-              filter === f
-                ? "border-transparent bg-ink text-ivory"
-                : "border-gold/35 bg-card/60 text-ink hover:bg-champagne-soft"
-            }`}
-          >
-            {f}
-          </button>
-        ))}
-      </div>
-
       <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {shown.map((e, i) => {
+        {events.map((e, i) => {
           const theme = themes[e.theme];
           return (
             <button
